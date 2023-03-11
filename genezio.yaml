@@ -6,7 +6,11 @@ sdk:
     runtime: node
   path: ./sdk/
 classes:
-  - path: ./coinGeko.js
+  - path: ./marketDataService.js
+    type: jsonrpc
+  - path: ./pdfGeneratorService.js
+    type: jsonrpc
+  - path: ./mailService.js
     type: jsonrpc
 
 

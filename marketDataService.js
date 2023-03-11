@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-export class CoinGeko {
-    async getCoinData(coin) {
+export class MarketDataService {
+    async #getCoinData(coin) {
         var endpoint = `https://api.coingecko.com/api/v3/coins/${coin}?localization=false&tickers=false&community_data=false&developer_data=false`;
 
         try {
@@ -26,7 +26,7 @@ export class CoinGeko {
 
         for(var coinId in coins){
             console.log(coinId);
-            let obj = await this.getCoinData(coinId);
+            let obj = await this.#getCoinData(coinId);
             obj.symbol = coins[coinId];
             
             data.push(obj);

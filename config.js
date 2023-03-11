@@ -1,0 +1,1 @@
+export const GOTENBERG_URL = "http://173.249.22.67:3333"
