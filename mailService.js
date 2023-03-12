@@ -2,7 +2,7 @@ import { MAIL_AUTH_EMAIL, MAIL_AUTH_PASSWORD, MAIL_FROM_NAME, MAIL_FROM_EMAIL } 
 const nodemailer = require('nodemailer');
 
 export class MailService {
-    async sendEmai(email, content){
+    async sendEmail(email, content){
         return await this.#send(email, content);
     }
 
@@ -27,6 +27,7 @@ export class MailService {
 
         transporter.sendMail(mailOptions, function(error, info){
             if (error) {
+                console.log(error);
                 return error;
             } else {
                 return true;
