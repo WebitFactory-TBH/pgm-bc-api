@@ -25,14 +25,13 @@ export class MailService {
             text: content
         };
 
-        transporter.sendMail(mailOptions, function(error, info){
-            if (error) {
-                console.log(error);
-                return error;
-            } else {
-                console.log(info);
-                return true;
-            }
-        });
+
+        try{
+            return await transporter.sendMail(mailOptions);
+        } catch(e){
+            console.log(e);
+            return e;
+        }
+
     }
 }
