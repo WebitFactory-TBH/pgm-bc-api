@@ -6,7 +6,7 @@
   import { Remote } from "./remote.js"
   
   export class pdfGeneratorService {
-      static remote = new Remote("http://127.0.0.1:8083/pdfGeneratorService")
+      static remote = new Remote("https://cdmujpyl5y5d3qirfa6ssap4n40fmhjw.lambda-url.eu-central-1.on.aws/")
   
       static async getPdf(data) {
           return pdfGeneratorService.remote.call("pdfGeneratorService.getPdf", data)  

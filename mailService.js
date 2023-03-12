@@ -1,5 +1,5 @@
 import { MAIL_AUTH_EMAIL, MAIL_AUTH_PASSWORD, MAIL_FROM_NAME, MAIL_FROM_EMAIL } from "./config.js";
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer';
 
 export class MailService {
     async sendEmail(email, content){

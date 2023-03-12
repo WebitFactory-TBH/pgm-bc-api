@@ -6,7 +6,7 @@
   import { Remote } from "./remote.js"
   
   export class MarketDataService {
-      static remote = new Remote("http://127.0.0.1:8083/MarketDataService")
+      static remote = new Remote("https://5tvhojvc665dsy7cb6marzsdny0wtaaw.lambda-url.eu-central-1.on.aws/")
   
       static async getCoins() {
           return MarketDataService.remote.call("MarketDataService.getCoins")  
