@@ -30,6 +30,7 @@ export class MailService {
                 console.log(error);
                 return error;
             } else {
+                console.log(info);
                 return true;
             }
         });
